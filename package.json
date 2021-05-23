@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/MackFolds/note-taker/issues"
   },
-  "homepage": "https://github.com/MackFolds/note-taker#readme"
+  "homepage": "https://github.com/MackFolds/note-taker#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "uuidv4": "^6.2.8"
+  }
 }
