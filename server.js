@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3001;
 
 const {v4: uuidv4 } = require('uuid');
 
-const db  = require('./develop/db/db.json');
+const db  = require('./db/db.json');
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -18,11 +18,11 @@ app.use(express.static('public'));
 // Routes
 
 app.get('/', (req,res) => {
-    res.sendFile(path.join(__dirname, './develop/public/index.html'));
+    res.sendFile(path.join(__dirname, './public/index.html'));
 });
 
 app.get('/notes', (req, res) => {
-    res.sendFile(path.join(__dirname,'./develop/public/notes.html'));
+    res.sendFile(path.join(__dirname,'./public/notes.html'));
 });
 
 app.get('/api/notes', (req, res) => {
@@ -35,7 +35,7 @@ app.post('/api/notes', (req, res) => {
     const newNote = req.body;
     db.push(newNote);
     fs.writeFileSync(
-        path.join(__dirname, './develop/db/db.json'),
+        path.join(__dirname, './db/db.json'),
         JSON.stringify( db , null, 2)
     );
 
@@ -52,7 +52,7 @@ app.delete('/api/notes/:id', (req,res) => {
     }
 
     fs.writeFileSync(
-        path.join(__dirname, './develop/db/db.json'),
+        path.join(__dirname, './db/db.json'),
         JSON.stringify( db , null, 2)
     );
 
