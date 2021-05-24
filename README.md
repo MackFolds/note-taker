@@ -15,6 +15,9 @@
   npm install in the terminal is the only instruction needed to run
   ## Usage
   Click the live link to be redirected to the application https://aqueous-plateau-06210.herokuapp.com/notes .
+  ## Images 
+  ![notes HTML page](images\noteshtml.png)
+  ![note taker home HTML page](images\notetakerhtml.png)
   ## Languages
   JavaScript<br>HTML<br>CSS<br>ES6<br>jQuery<br>Bootstrap
   ## Contributing
